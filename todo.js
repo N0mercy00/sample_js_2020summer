@@ -22,17 +22,17 @@ function saveToDos(){
 }
 
 function paintToDo(text){
-    const li=document.createElement("li");              //비어있는 li 생성
-    const delBtn = document.createElement("button");    //버튼생성
+    const li=document.createElement("li");              
+    const delBtn = document.createElement("button");    
     const newId=toDos.length+1;
-    delBtn.innerHTML="❌";                              //버튼셋팅
+    delBtn.innerHTML="❌";                              
     delBtn.addEventListener("click",deleteToDo);
     const span=document.createElement("span");
     span.innerText=text;
     li.appendChild(delBtn);
-    li.appendChild(span);                              //만든 li에 버튼 추가
+    li.appendChild(span);                              
     li.id=newId;
-    toDoList.appendChild(li);                           //toDoList에 li추가
+    toDoList.appendChild(li);                           
     const toDoObj={
         text: text,
         id:newId
