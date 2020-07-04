@@ -28,11 +28,13 @@ function paintGreeting(text){                            //form 지우고 greeti
 
 function loadName(){
     const currentUser=localStorage.getItem(USER_LS);
-    if(currentUser===null){
-        askForName();                                    //로컬에 저장된 이름 없으면 askForName
+    if(currentUser === null){
+        askForName();     
+                                      //로컬에 저장된 이름 없으면 askForName
     
     }else{
         paintGreeting(currentUser);                      //있으면 paintGreeting
+        
     }
 }
 
